@@ -13,11 +13,13 @@ int maxCandies(vector <int> arr, int k) {
   
   while(k > 0)
   {
+    //he top element of a priority queue is the max
     int x = q.top();
     q.pop();
     count+=x;
-    x/=2;
+    x/=2; //int division
     
+    //if x is now zero, not necessary to add it to queue
     if(x != 0)
         q.push(x);
     
